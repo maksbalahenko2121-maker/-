@@ -450,9 +450,9 @@ async def start_withdraw(callback: types.CallbackQuery, state: FSMContext):
 
     bal = get_balance(user.id)
 
-    if bal < 10:
+    if bal < 15:
 
-        await callback.answer("Минимальная сумма для вывода — 10 ⭐.", show_alert=True)
+        await callback.answer("Минимальная сумма для вывода — 15 ⭐.", show_alert=True)
 
         return
 
