@@ -468,7 +468,7 @@ async def start_withdraw(callback: types.CallbackQuery, state: FSMContext):
 
         f"Получатель: @{user.username}\n\n"
 
-        f"Введи количество звезд для вывода (минимум 10):",
+        f"Введи количество звезд для вывода (минимум 15):",
 
         reply_markup=cancel_keyboard("main_menu"),
 
@@ -508,9 +508,9 @@ async def process_withdraw(message: types.Message, state: FSMContext):
 
     bal = get_balance(user.id)
 
-    if amount < 10:
+    if amount < 15:
 
-        await message.answer("⚠️ Минимальная сумма вывода — 10 ⭐. Введи другое число:")
+        await message.answer("⚠️ Минимальная сумма вывода — 15 ⭐. Введи другое число:")
 
         return
 
